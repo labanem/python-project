@@ -14,3 +14,5 @@ print(ceil(2.7))
 
 user_name = input("Please Enter your name: ")
 print("Hi "+ user_name)
+user_age = input("Please Enter Age: ")
+print("I am  "+ user_age + " years old")
