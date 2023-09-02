@@ -38,8 +38,8 @@ def calculator(num1,num2):
 
 # If Statements
 
-is_male = False
-is_tall = True
+is_male = True
+is_tall = False
 
 if is_male and is_tall:
     print("You are both male and tall")
@@ -51,3 +51,14 @@ else:
     print("You are neither male nor tall")
 
 
+# Max Value Function
+
+def max_value(num3, num4, num5):
+    if num3 >= num4 and num3 >= num5:
+        return num3
+    elif num4 >= num3 and num4 >= num5:
+        return num4
+    else:
+        return num5
+
+print(max_value(770,740,377))
