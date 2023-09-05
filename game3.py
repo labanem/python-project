@@ -22,3 +22,28 @@ i = 1
 while i <= 5:
     print(i)
     i = i + 1
+
+# for loops
+for letter in "life":
+    print(letter)
+
+friends = ["Sam", "Jamo", "Alpha", "Kim", "Stevo"]
+for friend in friends:
+    print(friend)
+
+for index in range(len(friends)):
+    print(friends[index])
+
+for index in range(5):
+    if index == 0:
+        print("First Iteration")
+    else:
+        print("Not first")
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+
+print(raise_to_power(2,4))
