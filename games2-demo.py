@@ -1,9 +1,9 @@
-i = 1
-while i <= 5:
-    print(i)
-    i = i + 1
+#i = 1
+#while i <= 5:
+#    print(i)
+#    i = i + 1
 
-print("Done with the loop")
+#print("Done with the loop")
 
 # Guessing game
 #secret_word = "monopoly"
@@ -24,4 +24,4 @@ while guess != correct_guess and guess_limit != 3:
         guess = input("Enter guess: ")
         guess_count += 1
     else:
-        print("We won!")
+        print("We won, what did we won?!")
