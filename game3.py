@@ -1,4 +1,5 @@
 # Advanced guessing game
+
 correct_guess = "antelope"
 guess = ""
 guess_count = 0
@@ -21,7 +22,7 @@ else:
 i = 1
 while i <= 5:
     print(i)
-    i = i + 1
+    i += 1
 
 # for loops
 for letter in "life":
@@ -30,6 +31,7 @@ for letter in "life":
 friends = ["Sam", "Jamo", "Alpha", "Kim", "Stevo"]
 for friend in friends:
     print(friend)
+
 
 for index in range(len(friends)):
     print(friends[index])
@@ -64,3 +66,4 @@ def translate(phrase):
     return translation
 
 print(translate(input("Enter a phrase: ")))
+
