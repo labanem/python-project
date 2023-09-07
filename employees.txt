@@ -1,6 +1,2 @@
-Jim - Salesman
-Dwight - Salesman
-Michael - Branch Manager
-Kelly - Customer Care
-Pam - Receptionist
-Toby - HR
+
+Kevin - Accountant

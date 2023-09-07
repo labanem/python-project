@@ -14,11 +14,26 @@ except ValueError as err:
 
 '''
 
+#Writing and appending a file
+try:
+#    employee_file = open("c:\\Users\\Lambs\\git\\python-project\\employees.txt", "r")
+    employee_file = open(r"c:\Users\Lambs\git\python-project\employees1.txt", "w")
+
+    print(employee_file.write("\nKevin - Accountant"))
+
+    employee_file.close()
+
+except FileNotFoundError as err:
+    print(err)
+
+
 # Reading a file
 try:
-    employee_file = open("employees.txt","r")
+#    employee_file = open("c:\\Users\\Lambs\\git\\python-project\\employees.txt", "r")
+    employee_file = open(r"c:\Users\Lambs\git\python-project\employees1.txt", "r")
 
-    print(employee_file.readable())
+    for employee in employee_file.readlines():
+        print(employee)
 
     employee_file.close()
 
