@@ -17,9 +17,9 @@ except ValueError as err:
 #Writing and appending a file
 try:
 #    employee_file = open("c:\\Users\\Lambs\\git\\python-project\\employees.txt", "r")
-    employee_file = open(r"c:\Users\Lambs\git\python-project\employees1.txt", "w")
+    employee_file = open(r"c:\Users\Lambs\git\python-project\employees1.txt", "a")
 
-    print(employee_file.write("\nKevin - Accountant"))
+    print(employee_file.write("\nCreed - Quabidy Assurance"))
 
     employee_file.close()
 
