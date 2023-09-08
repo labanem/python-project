@@ -18,3 +18,10 @@ class Car:
         self.type = type
         self.colour = colour
         self.is_automatic = is_automatic
+
+#Creating a Questions Class
+
+class Question:
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
