@@ -1,3 +1,5 @@
+import useful_tools
+
 # Advanced guessing game
 
 correct_guess = "antelope"
@@ -41,18 +43,20 @@ for index in range(5):
         print("First Iteration")
     else:
         print("Not first")
-
+'''
 def raise_to_power(base_num, pow_num):
     result = 1
     for index in range(pow_num):
         result = result * base_num
     return result
+'''
 
-print(raise_to_power(2,4))
+#print(raise_to_power(2,4))
+print(useful_tools.raise_to_power(3,3))
 
 #Translation app
 #Translate all vowels to letter 'g'
-
+'''
 def translate(phrase):
     translation = ""
     for letter in phrase:
@@ -64,8 +68,11 @@ def translate(phrase):
         else:
             translation = translation + letter
     return translation
-
-print(translate(input("Enter a phrase: ")))
+'''
+# print(translate(input("Enter a phrase: ")))
+print(useful_tools.translate(input("Enter phrase: ")))
 
 #
 
+for friend in useful_tools.theoffice:
+    print(friend)
