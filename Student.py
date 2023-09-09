@@ -30,3 +30,21 @@ class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
+
+class Chef:
+    def makes_mukimo(self):
+        print("This chef makes mukimo")
+
+    def makes_pilau(self):
+        print("This chef makes pilau")
+
+    def makes_dessert(self):
+        print("This chef makes dessert")
+
+class ChineseChef(Chef):
+
+    def makes_pilau(self):
+        print("This chef makes mutton biriani")
+    
+    def makes_fried_rice(self):
+        print("This chef makes fried rice")
