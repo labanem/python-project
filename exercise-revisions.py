@@ -1,22 +1,17 @@
-#Building a more advanced calculator
+#Advanced Calculator version 2
+def calculate(num1,num2,operator):
+    try:
+        if operator == "+":
+            return float(num1) + float(num2)
+        elif operator == "-":
+            return  float(num1) - float(num2)
+        elif operator == "/":
+            return float(num1) / float(num2)
+    except ValueError as err:
+        print(err)
+        
+num1 = input ("Enter value of num1: ")
+operator = input("Enter operator: ")
+num2 = input("Enter value of num2: ")
 
-num1 = input("Enter num1: ")
-num2 = input("Enter num2: ")
-operator = input("Enter Operator: ")
-
-try:
-
-    if operator == "+":
-        result = float(num1) + float(num2)
-    elif operator == "-":
-        result = float(num1) - float(num2)
-    elif operator == "/":
-        result = float(num1) / float(num2)
-    print("The result is "+ str(result))
-
-except ValueError as err:
-    print(err)
-
-except ZeroDivisionError:
-    print("A number cannot be divided by 0")
-    
+print("The answer is: " + str(calculate(num1,num2,operator)))
