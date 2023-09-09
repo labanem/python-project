@@ -44,3 +44,52 @@ except ValueError as err:
 
 except ZeroDivisionError:
     print("A number cannot be divided by 0")
+
+#Advanced Calculator version 2
+
+def calculate(num1,num2,operator):
+    if operator != "+" and operator != "-" and operator != "/":
+        print(operator + " is not a valid operator.")
+        return
+    else:
+        try:
+            if operator == "+":
+                return float(num1) + float(num2)
+            elif operator == "-":
+                return  float(num1) - float(num2)
+            elif operator == "/":
+                return float(num1) / float(num2)
+        except ValueError as err:
+            print(err)
+        except ZeroDivisionError as err:
+            print(err)
+
+num1 = input ("Enter value of num1: ")
+operator = input("Enter operator: ")
+num2 = input("Enter value of num2: ")
+
+#print(calculate(num1,num2,operator))
+
+print("The answer is: " + str(calculate(num1,num2,operator)))
+
+
+'''
+#To figure out a way to use classes for a calclulator
+# Advanced calculator Version 3
+from Classrevisions import Calculator
+
+num1 = input("Enter num1: ")
+#operator = "+"
+num2 = input("Enter num2: ")
+
+valid_operators = [
+    "+",
+    "-",
+    "/",
+    "*"
+]
+
+calc = Calculator(num1, num2, valid_operators[0])
+
+print(calc.operator)
+'''

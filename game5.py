@@ -24,7 +24,6 @@ print(car1.type)
 
 
 #Multiple Choice Questions
-
 question_prompts = [
     "What is your favourite food?\n(a) Mashed Potatoes\n(b) Pilau\n(c) Matoke\n\n",
     "What is your favourite car?\n(a) BMW\n(b) Fuso\n(c) Mercedes\n\n",
