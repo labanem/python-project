@@ -1,17 +1,22 @@
-# Advanced calculator Version 3
-from Classrevisions import Calculator
+#Guessing game
+#A user has 3 guesses to guess the right thing. If they don't get it correct, the program
+#terminates and displays an 'out of guesses' or 'wrong guess' message
+#using if, while, for loops
 
-num1 = input("Enter num1: ")
-#operator = "+"
-num2 = input("Enter num2: ")
+guess = ""
+guess_limit = 3
+guess_count = 0
+correct_guess = "green"
+out_of_guess = False
 
-valid_operators = [
-    "+",
-    "-",
-    "/",
-    "*"
-]
+while guess != correct_guess and not(out_of_guess):
+    if guess_count < guess_limit:
+        guess = input("Enter guess: ")
+        guess_count += 1
+    else:
+        out_of_guess = True
 
-calc = Calculator(num1, num2, valid_operators[0])
-
-print(calc.operator)
+if out_of_guess:
+    print("Out of guesses, you lose!")
+else:
+    print("You win!")
