@@ -24,7 +24,6 @@ def raise_to_power(base_num, pow_num):
 
 #Revision
 # The power of a number
-
 def num_powers(num, power_num):
     result = 1
     for index in range(power_num):
