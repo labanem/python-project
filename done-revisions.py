@@ -116,3 +116,19 @@ if out_of_guess:
     print("Out of guesses, you lose!")
 else:
     print("You win!")
+
+# Building a translator
+# Take in a string and tranlate all the vowels to a specific letter
+
+def translate(phrase):
+    translation = ""
+    for letter in phrase:
+        if letter.lower() in 'aeiou':
+            if letter.isupper():
+               translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+    return translation
+print(translate(input("Enter phrase: ")))

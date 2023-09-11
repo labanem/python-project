@@ -1,15 +1,18 @@
-# Building a translator
-# Take in a string and tranlate all the vowels to a specific letter
+#Reading and editing a file
 
-def translate(phrase):
-    translation = ""
-    for letter in phrase:
-        if letter.lower() in 'aeiou':
-            if letter.isupper():
-               translation = translation + "G"
-            else:
-                translation = translation + "g"
-        else:
-            translation = translation + letter
-    return translation
-print(translate(input("Enter phrase: ")))
+try:
+    revision_file = open(r"C:\Users\Lambs\git\python-project\employees.txt", "a")
+    print(revision_file.write("\nStanley - Sales and Marketing"))
+    revision_file.close()
+except FileNotFoundError as err:
+    print(err)
+
+try:
+    revision_file = open(r"C:\Users\Lambs\git\python-project\employees.txt", "r")
+
+    for employee in revision_file.readlines():
+        print(employee)
+
+    revision_file.close()
+except FileNotFoundError as err:
+    print(err)
