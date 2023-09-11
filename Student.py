@@ -48,3 +48,26 @@ class ChineseChef(Chef):
     
     def makes_fried_rice(self):
         print("This chef makes fried rice")
+
+#Classes Revisions
+class Book:
+    def __init__(self, title, author, publisher, is_fiction, pages):
+        self.title = title
+        self.author = author
+        self.publisher = publisher
+        self.is_fiction = is_fiction
+        self.pages = pages
+
+    def one_day_read(self):
+        if self.pages >= 500:
+            return False
+        else:
+            return True
+        
+#Inheritance
+class ChildrensBook(Book):
+    def one_day_read(self):
+        if self.pages <= 30:
+            return True
+        else:
+            return False

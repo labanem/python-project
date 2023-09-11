@@ -1,4 +1,6 @@
 import useful_tools
+from Student import Book
+from Student import ChildrensBook
 
 #Hello World
 print("Hello World")
@@ -162,3 +164,18 @@ try:
     print(useful_tools.num_powers(int(base_num), int(power)))
 except ValueError as err:
     print(err)
+
+
+#Classes and Objects - Revision
+book1 = Book("Montecristo", "Martin Suter", "No Exit Press", True, 321)
+book2 = Book("Win or Die", "Bruce Craven", "Blink Publishing", False, 1500)
+
+print(book1.author)
+print(book2.is_fiction)
+print("\n")
+print(book1.pages, book1.title, book1.one_day_read())
+print(book2.one_day_read())
+
+cbook1 = ChildrensBook("Bah Bah Black", "Black Sheep", "Farmes Publishers", True, 31)
+
+print(cbook1.one_day_read())
