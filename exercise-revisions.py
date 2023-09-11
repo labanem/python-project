@@ -1,18 +1,9 @@
-#Reading and editing a file
+import useful_tools
 
 try:
-    revision_file = open(r"C:\Users\Lambs\git\python-project\employees.txt", "a")
-    print(revision_file.write("\nStanley - Sales and Marketing"))
-    revision_file.close()
-except FileNotFoundError as err:
-    print(err)
+    base_num = input("Enter base number: ")
+    power = input("Enter power numer: ")
 
-try:
-    revision_file = open(r"C:\Users\Lambs\git\python-project\employees.txt", "r")
-
-    for employee in revision_file.readlines():
-        print(employee)
-
-    revision_file.close()
-except FileNotFoundError as err:
+    print(useful_tools.num_powers(int(base_num), int(power)))
+except ValueError as err:
     print(err)
