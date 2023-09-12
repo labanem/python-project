@@ -179,3 +179,28 @@ print(book2.one_day_read())
 cbook1 = ChildrensBook("Bah Bah Black", "Black Sheep", "Farmes Publishers", True, 31)
 
 print(cbook1.one_day_read())
+
+#Building a Multiple Choice Exam - Revision
+from Student import Quiz
+
+my_questions = [
+    "Which of the following is not a distribution of Windows OS?\n(a) Windows 10\n(b) Windows XP\n(C) CentOS\n\n",
+    "Select the German car brand from the following list:\n(a) Mercedes\n(b) Fiat\n(c) Suzuki\n\n",
+    "Which one is not a former president of Kenya?\n(a) Daniel Moi\n(b) Mwai Kibaki\n(c) Mobutu Sesseseko\n\n"
+]
+
+questions = [
+    Quiz(my_questions[0], "c"),
+    Quiz(my_questions[1], "a"),
+    Quiz(my_questions[2], "c")
+]
+
+def ask_questions(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.task)
+        if answer == question.response:
+            score += 1
+    print(str(score) + "/" + str(len(questions)))
+
+ask_questions(questions)

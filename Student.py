@@ -71,3 +71,9 @@ class ChildrensBook(Book):
             return True
         else:
             return False
+        
+#Multiple questions - revision
+class Quiz:
+    def __init__(self, task, response):
+        self.task = task
+        self.response = response
