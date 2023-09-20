@@ -1,48 +1,38 @@
-# 10 To find a maximum of 3 numbers
+# 13 The fibonacci of a number
 
-largest = ""
-def max(a,b,c):
-    if (a >= b) and (a >= c):
-        largest = a
-    elif (b >= a) and (b >= c):
-        largest = b
-    else:
-        largest = c
-    return largest
+nterms = int(input("How many terms?: "))
+n1, n2 = 0, 1
+count = 0
 
-a = float(input("Enter a: "))
-b = float(input("Enter b: "))
-c = float(input("Enter c: "))
+if nterms <= 0:
+    print("Please enter a positive number.")
+elif nterms == 1:
+    print("Fibonacci sequence upto",nterms,":")
+    print(n1)
+else:
+    while count < nterms:
+        print(n1)
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        count += 1
 
-print(max(a,b,c))
+# 14 the GCD of two numbers
+def gcd(a, b):
+    if a == 0:
+        return b
+    if b == 0:
+        return a
+    if a == b:
+        return a
+    if a > b:
+        return gcd(a-b, b)
+    return gcd(a, b-a)
 
-# 11 To find minimum of 3 numbers
+a = 98
+b = 56
 
-def min(d,e,f):
-    if (d <= e) and (d <= f):
-        lowest = d
-    elif (e <= d) and (e <= f):
-        lowest = e
-    else:
-        lowest = f
-    return lowest
-
-print(min(20,322,24))
-
-# 12 To find the factorial of a number
-
-num1 = int(input("Enter a number to find its factorial: "))
-
-def findfactorial(num1):
-    factorial = 1
-    if num1 < 0:
-        print("We cannot get factorials of negative integers")
-    elif num1 == 0:
-        print("The factorial of 0 is 1.")
-    else:
-        for i in range(1,num1+1):
-            factorial = factorial * i
-        return factorial
-
-print(findfactorial(num1), "is the factorial of",num1)
-
+if(gcd(a,b)):
+    print("GCD of",a,"and",b,"is", gcd(a, b))
+else:
+    print("Not found!")
