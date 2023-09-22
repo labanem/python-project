@@ -1,38 +1,61 @@
-# 13 The fibonacci of a number
+# 15 A program to print a right-angled triangled image with *
+def myfunc(n):
+    for i in range(0,n):
+        for j in range(0,i+1):
+            print("* ",end="")
+        print("\r")
 
-nterms = int(input("How many terms?: "))
-n1, n2 = 0, 1
-count = 0
+n = 5
+myfunc(n)
 
-if nterms <= 0:
-    print("Please enter a positive number.")
-elif nterms == 1:
-    print("Fibonacci sequence upto",nterms,":")
-    print(n1)
-else:
-    while count < nterms:
-        print(n1)
-        nth = n1 + n2
-        n1 = n2
-        n2 = nth
-        count += 1
+# 16 A program to print a different type of triangle with *s
 
-# 14 the GCD of two numbers
-def gcd(a, b):
-    if a == 0:
-        return b
-    if b == 0:
-        return a
-    if a == b:
-        return a
-    if a > b:
-        return gcd(a-b, b)
-    return gcd(a, b-a)
+def myfunc(n):
+    k = n - 1
+    for i in range(0,n):
+        for j in range(0,k):
+            print(end=" ")
+        k = k - 1
+        for j in range(0, i+1):
+            print("* ", end="")
+        print("\r")
+    
+n = 5
+myfunc(n)
 
-a = 98
-b = 56
+# 17
+def num(n):
+    num = 1
+    for i in range(0,n):
+        num = 1
+        for j in range(0, i+1):
+            print(num, end=" ")
+            num = num + 1
+        print("\r")
 
-if(gcd(a,b)):
-    print("GCD of",a,"and",b,"is", gcd(a, b))
-else:
-    print("Not found!")
+n = 5
+num(n)
+
+#rev 17
+def num(n):
+    num = 1
+    for i in range(0,n):
+        num = 1
+        for j in range(0,i+1):
+            print(num,end=" ")
+            num += 1
+        print("\r")
+
+n = 6
+num(6)
+
+#rev 15
+
+def stars(n):
+    for i in range(0,n):
+        for j in range(0,i+1):
+            print("* ",end=" ")
+        print("\r")
+
+n = 7
+stars(7)
