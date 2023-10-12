@@ -1,6 +1,7 @@
 from Student import Student
 from Student import Car
 from Student import Question
+from Student import Quiz
 
 #Students
 student1 = Student("Jim", "Business", 3.1, False)
@@ -15,7 +16,6 @@ try:
 
 except TypeError as err:
     print(err)
-
 
 #Cars
 car1 = Car("BMW", "Sports Utility", "red", True)
@@ -32,17 +32,17 @@ question_prompts = [
 ]
 
 questions = [
-    Question(question_prompts[0], "a"),
-    Question(question_prompts[1], "c"),
-    Question(question_prompts[2], "b"),
-    Question(question_prompts[3], "b")
+    Quiz(question_prompts[0], "a"),
+    Quiz(question_prompts[1], "c"),
+    Quiz(question_prompts[2], "b"),
+    Quiz(question_prompts[3], "b")
 ]
 
 def ask_questions(questions):
     score = 0
     for question in questions:
-        answer = input(question.prompt)
-        if answer == question.answer:
+        answer = input(question.task)
+        if answer == question.response:
             score += 1
     print("You got " + str(score) + "/" + str(len(questions)) + " Correct.")
 
