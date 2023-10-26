@@ -140,6 +140,7 @@ print(translate(input("Enter phrase: ")))
 #Reading and editing a file
 #a - append
 #r - read
+
 try:
     revision_file = open(r"C:\Users\Lambs\git\python-project\employees.txt", "a")
     print(revision_file.write("\nStanley - Sales and Marketing"))

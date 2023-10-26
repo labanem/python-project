@@ -77,3 +77,22 @@ class Quiz:
     def __init__(self, task, response):
         self.task = task
         self.response = response
+
+class Paper:
+    def __init__(self, weight, colour, source, size):
+        self.weight = weight
+        self.colour = colour
+        self.source = source
+        self.size = size
+
+    def for_school(self):
+        if self.colour == "white":
+            return True
+        else:
+            return False
+        
+#Multiple choice quiz - Revision
+class Multiple_Questions:
+    def __init__(self, querry, response):
+        self.querry = querry
+        self.response = response
