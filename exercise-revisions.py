@@ -60,35 +60,22 @@ paper2 = Paper(12, "red", "conifer tree", "a1")
 print(paper2.source)
 print(paper2.for_school())
 
-chef1 = ChineseChef()
-chef1.makes_pilau()
+#gcd of a number
+def gcd(a,b):
+    if a == 0:
+        return b
+    if b == 0:
+        return a
+    if a == b:
+        return a
+    if a > b:
+        return gcd(a-b, b)
+    return gcd(a, b-a)
 
-chef2 = Chef()
-chef2.makes_pilau()
+a = 413
+b = 61
 
-#Multiple choice exam
-question1 = Multiple_Questions("What is the colour of the sky?: ", "Blue")
-
-print(question1.querry)
-
-question_list = [
-    "What is the colour of the sky?: \n(a) Blue\n(b) Green\n\n",
-    "How many seasons are there in a year?: \n(a)One\n(b) Four\n\n",
-    "Which one of these is a fruit?: \n(a)Mango\n(b) Chocolate\n\n"
-]
-
-questions = [
-    Multiple_Questions(question_list[0],"a"),
-    Multiple_Questions(question_list[1],"b"),
-    Multiple_Questions(question_list[2],"a")
-]
-
-def ask_questions(questions):
-    score = 0
-    for question in questions:
-        answer = input(question.querry)
-        if answer == question.response:
-            score += 1
-    return print("You scored",score, "/", len(questions))
-
-ask_questions(questions)
+if (gcd(a,b)):
+    print("The gcd of",a,"and",b,"is",gcd(a,b))
+else:
+    print("GCD not found.")
