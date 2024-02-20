@@ -39,3 +39,17 @@ try:
         print("{0} is an ODD number.".format(num))
 except ValueError as err:
     print(err)
+
+#Determine whether a number is a prime number
+num = int(input("Enter the number to check for Prime:"))
+flag = False
+
+if num > 1:
+    for i in range(2, num):
+        if num%i == 0:
+            flag = True
+            break
+if flag:
+        print("{0} is NOT prime!".format(num))
+else:
+    print("{0} is a PRIME!".format(num))
