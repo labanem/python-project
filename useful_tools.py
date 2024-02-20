@@ -34,10 +34,12 @@ def num_powers(num, power_num):
 #Revision question
 # 20 Feb 2024
 
+#Addition
 def addition(num1,num2):
     result = num1 + num2
     return result
 
+#Exponentials
 def exponential(base,power):
     result = 1
     for index in range(power):

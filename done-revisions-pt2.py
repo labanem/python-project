@@ -1,12 +1,30 @@
 import useful_tools
 
 #Revision 20 Feb 2024
-number1 = input("Enter first number: ")
-number2 = input("Enter second number: ")
-print("Addition: ",useful_tools.addition(int(number1), int(number2)))
+try:
+    number1 = input("Enter first number: ")
+    number2 = input("Enter second number: ")
+    print("Addition: ",useful_tools.addition(int(number1), int(number2)))
+except ValueError as err:
+    print(err)
 
 #Exponentials of numbers
 basenumber = input("Enter base number: ")
 powernumber = input("Enter power number: ")
 
 print("Exponential: ",useful_tools.exponential(int(basenumber),int(powernumber)))
+
+#Greatest of 3 numbers
+try:
+    a = int(input("Enter a: "))
+    b = int(input("Enter b: "))
+    c = int(input("Enter c: "))
+
+    if a > b and a > c:
+        print("a wins!",a)
+    elif b > a and b > c:
+        print("b wins!",b)
+    else:
+        print("c wins!",c)
+except ValueError as err:
+    print(err)
