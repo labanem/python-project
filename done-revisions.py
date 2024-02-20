@@ -167,7 +167,6 @@ try:
 except ValueError as err:
     print(err)
 
-
 #Classes and Objects - Revision
 book1 = Book("Montecristo", "Martin Suter", "No Exit Press", True, 321)
 book2 = Book("Win or Die", "Bruce Craven", "Blink Publishing", False, 1500)
