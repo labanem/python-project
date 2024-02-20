@@ -30,10 +30,16 @@ def num_powers(num, power_num):
         result = result * num
     return result
 
-
+#------------------------------------------------------------------------------------------------------------
 #Revision question
 # 20 Feb 2024
 
 def addition(num1,num2):
     result = num1 + num2
+    return result
+
+def exponential(base,power):
+    result = 1
+    for index in range(base):
+        result = base * power
     return result
