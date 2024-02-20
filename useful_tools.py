@@ -40,6 +40,6 @@ def addition(num1,num2):
 
 def exponential(base,power):
     result = 1
-    for index in range(base):
-        result = base * power
+    for index in range(power):
+        result = result * base
     return result
