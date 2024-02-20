@@ -29,3 +29,11 @@ def num_powers(num, power_num):
     for index in range(power_num):
         result = result * num
     return result
+
+
+#Revision question
+# 20 Feb 2024
+
+def addition(num1,num2):
+    result = num1 + num2
+    return result
