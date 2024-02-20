@@ -1,8 +1,6 @@
-
-
 #Determine if a number is an Odd or Even number
 try:
-    num = input("Enter number: ")
+    num = float(input("Enter number: "))
 
     if num%2 == 0:
         print("{0} is an EVEN number.".format(num))
