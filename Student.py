@@ -96,3 +96,26 @@ class Multiple_Questions:
     def __init__(self, querry, response):
         self.querry = querry
         self.response = response
+
+
+#--------------------------------------------------------------------------------------------------------
+#Feb 2024 Revisions
+class person:
+    def __init__(self,name,age,gender,race,height,weight,gpa):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.race = race
+        self. height = height
+        self.weight = weight
+        self.gpa = gpa
+
+    def education_level(self):
+        pass
+
+class graduate(person):
+    def education_level(self):
+        if self.gpa == 4.2:
+            return True
+        else:
+            return False

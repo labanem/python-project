@@ -1,15 +1,15 @@
-#A translator program
+#Classes and Objects
+from Student import person
+from Student import graduate
 
-def translate(phrase):
-    translation = ""
-    for letter in phrase:
-        if letter.lower() in 'a,e,i,o,u':
-            if letter.isupper():
-                translation = translation + 'X'
-            else:
-                translation = translation + 'x'
-        else:
-            translation = translation + letter
-    return translation
+person1 = person("Marcus",14,"male","black",6.0,112,3.7)
+person2 = person("Wincate", 21, "female", "Asian",6.1, 87,4.0)
+person3 = person("Loki",322,"Male","alien",6.7,92,4.2)
 
-print(translate(input("Enter Phrase: ")))
+print(person1.gender)
+print(person1.education_level())
+
+print(person2.race)
+print(person2.education_level())
+
+print(person3.education_level())
